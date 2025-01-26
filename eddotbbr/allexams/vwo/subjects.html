@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Burenburg Examination Portal">
+    <title>Subjects vwo | AllExams</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo"><a href="../index.html"><img src="../logo.png" width="100px"></a>AllExams</div>
+            <nav class="navbar">
+                <a href="../index.html">Home</a>
+                <a href="../vwo.html">vwo</a>
+                <a href="../havo.html">havo</a>
+                <a href="../mavo.html">mavo</a>
+                <a href="../mixed.html">mixed</a>
+                <a href="../kader.html">kader</a>
+                <a href="../basics.html">basics</a>
+            </nav>
+        </header>
+        <div class="hero">
+            <h1>Subjects</h1>
+            <p>vwo</p>
+        </div>
+
+        <main>
+            <section id="announcements">
+                <h2>Planner</h2>
+                <ul>
+                    <li><span style="color: darkgrey;">January - April 2025 </span>| CPE's</li>
+                </ul>
+            </section>
+            <section id="subjects">
+                <section id="subjects">
+                    <h2>Subjects Overview</h2>
+                    <div class="tabs-container">
+                        <div class="tabs">
+                            <div class="tab" data-tab="social">Social Studies</div>
+                            <div class="tab" data-tab="scientific">Scientific</div>
+                            <div class="tab" data-tab="languages">Languages</div>
+                        </div>
+                        <div class="tab-content">
+                            <div id="social" class="tab-content-section">
+                                <h3>Social Studies</h3>
+                                <ul>
+                                    <li><strong>history</strong> (vwhis25) | <a href="history25.html">Link to page</a></li>
+                                    <li><strong>Geography</strong> (GEO102): Physical and human geography.</li>
+                                    <li><strong>Sociology</strong> (SOC103): The study of societies and cultures.</li>
+                                </ul>
+                            </div>
+                            <div id="scientific" class="tab-content-section">
+                                <h3>Scientific</h3>
+                                <ul>
+                                    <li><strong>Mathematics</strong> (MAT201): Advanced calculus and algebra.</li>
+                                    <li><strong>Physics</strong> (PHY202): Mechanics, thermodynamics, and waves.</li>
+                                    <li><strong>Chemistry</strong> (CHE203): Organic and inorganic chemistry.</li>
+                                </ul>
+                            </div>
+                            <div id="languages" class="tab-content-section">
+                                <h3>Languages</h3>
+                                <ul>
+                                    <li><strong>English</strong> (ENG301): Literature and language skills.</li>
+                                    <li><strong>French</strong> (FRE302): Basic to advanced French language.</li>
+                                    <li><strong>German</strong> (GER303): Grammar and communication.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>                       
+        </main>
+        <footer>
+            <p>©2025 Govdotbbr, Eddotbbr, Burenburg. All rights reserved.</p>
+            <p><a href="../privacy.html">Privacy Policy</a> | <a href="../#terms">T's and C's</a></p>
+        </footer>
+    </div>
+    <script>
+        // Add event listeners to tabs
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content-section');
+    
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Deactivate all tabs and content sections
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+    
+                // Activate the clicked tab and corresponding content section
+                tab.classList.add('active');
+                const tabContentId = tab.getAttribute('data-tab');
+                document.getElementById(tabContentId).classList.add('active');
+            });
+        });
+    
+        // Set the first tab and content as active by default
+        tabs[0].classList.add('active');
+        tabContents[0].classList.add('active');
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Portal / Govdotbbr</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="SharePoint_2013_23472.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <p>Below the login form for employees of Govdotbbr.</p>
+        <form id="loginForm">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            
+            <button type="submit">Login</button>
+            <p id="errorMessage"></p>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === 'dgray@gov.bbr' && password === 'DanielG1!') {
+                window.location.href = 'index1.html'; // Redirect to portal
+            } else {
+                errorMessage.textContent = 'Invalid email or password!';
+            }
+        });
+    </script>
+</body>
+</html>
