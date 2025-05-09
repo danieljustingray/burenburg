@@ -1,132 +1,112 @@
-/* General Styles */
 body {
-    font-family: "Verdana", sans-serif;
-    line-height: 1.6;
-    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #202124;
+    color: #202122;
 }
 
-/* Header */
-#top-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #dcdcdc;
-    padding: 0.5rem 1rem;
-}
-
-.header-content {
+header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #a2a9b1;
+    padding: 10px 15px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-#wiki-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #0077d7;
+header #p-logo a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/b/b3/Wikipedia-logo-v2-en.png') no-repeat center;
+    background-size: contain;
+    text-indent: -9999px;
 }
 
-.search-container {
-    display: flex;
-    gap: 0.5rem;
+header #p-search {
+    flex: 1;
+    text-align: right;
 }
 
-#search-box {
-    width: 200px;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+header #p-search form {
+    display: inline-block;
 }
 
-#search-button {
-    padding: 0.5rem;
+header #p-search input[type="search"] {
+    padding: 5px;
+    border: 1px solid #a2a9b1;
+    border-radius: 5px;
+}
+
+header #p-search input[type="submit"] {
+    background-color: #36c;
+    color: #fff;
     border: none;
-    background-color: #0077d7;
-    color: white;
-    border-radius: 4px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-#search-button:hover {
-    background-color: #005bb5;
-}
-
-/* Layout */
-.layout {
+#container {
     display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+    flex-wrap: nowrap;
+    margin: 15px;
 }
 
-/* Sidebar */
-.sidebar {
+aside {
     width: 200px;
-    padding: 1rem;
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-right: 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    padding: 10px;
+    margin-right: 15px;
+    flex-shrink: 0;
 }
 
-.sidebar h2 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.sidebar ul {
+aside ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.sidebar ul li {
-    margin: 0.5rem 0;
-}
-
-.sidebar ul li a {
+aside ul li a {
     text-decoration: none;
-    color: #0077d7;
+    color: #36c;
 }
 
-.sidebar ul li a:hover {
-    text-decoration: underline;
+main {
+    flex-grow: 1;
+    background-color: #fff;
+    border: 1px solid #a2a9b1;
+    padding: 15px;
 }
 
-/* Content */
-.content {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.article-section {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccd;
+    background-color: #f8f9fa;
 }
 
-.content h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.article-section h2 {
+    margin-top: 0;
 }
 
-.content h2 {
-    font-size: 1.5rem;
-    border-bottom: 1px solid #ddd;
-    margin-top: 2rem;
-    padding-bottom: 0.25rem;
-}
-
-.content p {
-    margin-bottom: 1rem;
-}
-
-/* Footer */
 footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #a2a9b1;
     text-align: center;
-    padding: 1rem;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 1rem;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    #container {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
 }

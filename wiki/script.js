@@ -1,13 +1,10 @@
+// JavaScript for responsive sidebar toggle
 document.addEventListener("DOMContentLoaded", () => {
-    const searchButton = document.getElementById("search-button");
-    const searchBox = document.getElementById("search-box");
+    const menuToggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("mw-panel");
 
-    searchButton.addEventListener("click", () => {
-        const query = searchBox.value.trim();
-        if (query) {
-            alert(`Searching for "${query}"...`);
-        } else {
-            alert("Please enter a search term.");
-        }
+    menuToggle.addEventListener("click", () => {
+        const isVisible = sidebar.style.display === "block";
+        sidebar.style.display = isVisible ? "none" : "block";
     });
 });

@@ -3,59 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burenburg - Wikipedia</title>
+    <title>Burenburg - The Free Encyclopedia</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header id="top-header">
-        <div class="header-content">
-            <a href="#" id="wiki-logo">Burenburg Wiki</a>
-            <div class="search-container">
-                <input type="text" placeholder="Search Burenburg..." id="search-box">
-                <button id="search-button">Search</button>
+    <header>
+        <div id="mw-head">
+            <div id="p-logo">
+                <a href="#" title="Main Page">Burenburg Wiki</a>
             </div>
+            <nav id="top-navigation">
+                <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+                <form action="#" id="searchform" role="search">
+                    <input type="search" name="search" placeholder="Search Burenburg" title="Search Burenburg">
+                    <button type="submit" name="go" title="Go to a page with this exact name">Go</button>
+                    <button type="submit" name="search" title="Search for pages containing this text">Search</button>
+                </form>
+            </nav>
         </div>
     </header>
 
-    <div class="layout">
-        <aside class="sidebar">
-            <h2>Contents</h2>
-            <ul>
-                <li><a href="#history">History</a></li>
-                <li><a href="#geography">Geography</a></li>
-                <li><a href="#culture">Culture</a></li>
-                <li><a href="#economy">Economy</a></li>
-            </ul>
+    <main>
+        <aside id="mw-panel">
+            <nav class="portal" id="p-navigation">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#">Main Page</a></li>
+                    <li><a href="#">Current Events</a></li>
+                    <li><a href="#">Random Article</a></li>
+                    <li><a href="#">About Burenburg Wiki</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <section class="portal" id="p-tb">
+                <h3>Tools</h3>
+                <ul>
+                    <li><a href="#">What links here</a></li>
+                    <li><a href="#">Related changes</a></li>
+                    <li><a href="#">Special pages</a></li>
+                    <li><a href="#">Permanent link</a></li>
+                    <li><a href="#">Page information</a></li>
+                </ul>
+            </section>
         </aside>
 
-        <main class="content">
-            <h1>Burenburg</h1>
-            <p><i>Burenburg is a fictional country described in this wiki.</i></p>
-            
-            <section id="history">
-                <h2>History</h2>
-                <p>Burenburg was founded in 1678 by settlers seeking refuge from neighboring conflicts...</p>
+        <article id="content-main">
+            <header>
+                <h1>Burenburg</h1>
+                <p><i>The fictional country described in this free encyclopedia.</i></p>
+            </header>
+
+            <section id="featured-article">
+                <h2>From today's featured article</h2>
+                <p><b>Burenburg's History:</b> Burenburg was founded in 1678 by settlers escaping neighboring conflicts...</p>
             </section>
 
-            <section id="geography">
-                <h2>Geography</h2>
-                <p>Burenburg is a landlocked country, with forests in the north and the Elberia River running through it...</p>
+            <section id="in-the-news">
+                <h2>In the news</h2>
+                <ul>
+                    <li>Burenburg celebrates the Festival of Lights this week...</li>
+                    <li>A major trade agreement signed with nearby fictional countries...</li>
+                </ul>
             </section>
-
-            <section id="culture">
-                <h2>Culture</h2>
-                <p>The people of Burenburg celebrate numerous festivals, including the famous Festival of Lights...</p>
-            </section>
-
-            <section id="economy">
-                <h2>Economy</h2>
-                <p>Agriculture is the backbone of Burenburg’s economy, with tourism and handcrafted goods contributing as well.</p>
-            </section>
-        </main>
-    </div>
+        </article>
+    </main>
 
     <footer>
-        <p>Burenburg Wiki is a fictional encyclopedia. &copy; 2025</p>
+        <p>Burenburg Wiki - A fictional free encyclopedia. &copy; 2025</p>
     </footer>
 </body>
 </html>
